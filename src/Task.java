@@ -74,5 +74,9 @@ public class Task {
         this.list = list;
     }
 
-
+    @Override
+    public String toString(){
+        return "name = " + name + ", date = " + date + ", priority = " + priority + ", id = " + id + ", tag = " +
+                tag + ", list = " + list;
+    }
 }

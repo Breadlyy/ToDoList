@@ -5,6 +5,7 @@ import java.util.*;
 
 public class ToDoList {
     public static void main(String[] args) {
+        // add Final1 Hi 2023-07-31
         ToDoList toDoList = new ToDoList();
         toDoList.run();
     }
@@ -30,8 +31,8 @@ public class ToDoList {
                     amountOfTasks++;
                     this.add(arrayList, amountOfTasks, formatter, map);
                     break;
-
-
+                case "showAllTasks":
+                    showAllTask(map);
             }
         }
 
@@ -49,5 +50,12 @@ public class ToDoList {
         task.setDate(localDate);
         task.setId(amountOfTasks);
         map.put(map.size(), tasks);
+    }
+
+    private void showAllTask(HashMap map)
+    {
+        for (int i = 0; i < map.size(); i++) {
+            System.out.println(map.get(i).toString());
+        }
     }
 }
